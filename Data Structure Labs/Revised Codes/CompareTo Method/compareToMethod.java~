@@ -1,0 +1,11 @@
+import java.util.*;
+public class compareToMethod
+{
+  public static void main(String[]args)
+  {
+    Object a=10;
+    Object b=20;
+    if(a.compareTo(b)==0)
+    {
+      System.out.println("They are equal");
+    

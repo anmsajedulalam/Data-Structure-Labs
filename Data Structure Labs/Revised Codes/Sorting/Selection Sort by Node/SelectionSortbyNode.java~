@@ -1,0 +1,20 @@
+public static void selectionSortbyNode(Node head) {
+    // Empty list or list with a single element is already sorted.
+    if (head == null || head.next == null)
+        return;
+
+    for (Node n = head; n.next != null; n = n.next) {
+        // Find the node with the minimum item, starting at `n'.
+        Node minNode = n;
+        for (Node p = n.next; p != null; p = p.next) {
+            if (((Comparable) p.element).compareTo(minNode.element) < 0)
+                minNode = p;
+         }
+        // Exchange with the first item (within `n'), but only if different
+        if (n != minNode) {
+            Object tmp = n.element;
+            n.element = minNode.element;
+            minNode.element = tmp;
+        }
+    
+}
